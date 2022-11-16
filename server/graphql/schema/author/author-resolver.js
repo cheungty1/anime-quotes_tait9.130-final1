@@ -1,3 +1,4 @@
+// Import and Destructure Models
 const { AuthorModel, validateAuthor } = require('../../../models/author')
 const AnimeModel = require('../../../models/anime')
 const authorResolver = {
@@ -54,4 +55,5 @@ const authorResolver = {
         },
     }
 };
+//Export AuthorResolver
 module.exports = authorResolver

@@ -53,4 +53,5 @@ const animeResolver = {
     },
   }
 };
+//Export AnimeResolver
 module.exports = animeResolver
