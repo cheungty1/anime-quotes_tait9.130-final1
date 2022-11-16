@@ -42,7 +42,6 @@ query {
   }
 }
 
-this 1 works:
 query {
   authors {
 	_id
@@ -51,7 +50,6 @@ query {
   }
 }
 
-this 1 works:
 mutation {
    addBook(input: {
      name: "fred2"
@@ -82,7 +80,6 @@ mutation AddBook($name:String, $genre:String, $author:ID){
    }
  }
 
-
  mutation {
 	deleteBook(id:"62b388426c6a36331df29970"){
     name
@@ -108,7 +105,6 @@ mutation EditBook($id:ID, $name:String, $genre:String, $author:ID){
    }
  }
 
-this 1 here is add author=
  mutation AddAuthor($name:String, $age:Int){
    addAuthor(input: {
      name: $name
