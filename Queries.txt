@@ -1,0 +1,121 @@
+mutation {
+  addAuthor(name:"Jamie Weston", age:30){
+	name
+  }
+}
+
+mutation {
+  addBook(name:"Plants", genre:"Non-Fiction", author:"60d174211bcc6746b6d55967"){
+	name
+	genre
+	author
+  }
+}
+
+query {
+  books {
+	_id
+	name
+	genre
+	author
+    author_relate {
+        name
+    }
+  }
+}
+
+query {
+  book(id: "60d174ed1bcc6746b6d5596b") {
+	_id
+	name
+	genre
+	author
+  }
+}
+
+query {
+  searchBooks(name: "book name here") {
+	_id
+	name
+	genre
+	author
+  }
+}
+
+this 1 works:
+query {
+  authors {
+	_id
+	name
+	age
+  }
+}
+
+this 1 works:
+mutation {
+   addBook(input: {
+     name: "fred2"
+     genre: "Fitz"
+     author: "62b114cfe9a2396383811ac5"
+   }) {
+     _id
+     name
+     genre
+     author
+   }
+ }
+
+
+mutation AddBook($name:String, $genre:String, $author:ID){
+   addBook(input: {
+     name: $name
+     genre: $genre
+     author: $author
+   }) {
+     _id
+     name
+     genre
+     author
+       author_relate {
+      name
+    }
+   }
+ }
+
+
+ mutation {
+	deleteBook(id:"62b388426c6a36331df29970"){
+    name
+    genre
+  }
+}
+
+
+mutation EditBook($id:ID, $name:String, $genre:String, $author:ID){
+   editBook(input: {
+     id: $id
+     name: $name
+     genre: $genre
+     author: $author
+   }) {
+     _id
+     name
+     genre
+     author
+       author_relate {
+      name
+    }
+   }
+ }
+
+this 1 here is add author=
+ mutation AddAuthor($name:String, $age:Int){
+   addAuthor(input: {
+     name: $name
+     age: $age
+   }) {
+     _id
+     name
+     age
+   }
+ }
