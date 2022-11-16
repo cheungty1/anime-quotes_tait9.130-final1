@@ -3,6 +3,7 @@
  import { Link } from "svelte-navigator";
 </script>
 
+<!-- Image -->
 <main>
  <div>
   <img src="../../images/ryo-yoshitake-pASnKx29HK4-unsplash.jpg" alt="background image" />
@@ -15,6 +16,7 @@
 
 </main>
 
+<!-- Image Styling -->
 <style>
 img {
   height: 55vh;
